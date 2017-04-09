@@ -41,6 +41,21 @@ public class UseRenderingPlugin : MonoBehaviour
 #endif
 	private static extern void DestroyWebCam();
 
+//native function for get remap parameters for shader remap
+#if UNITY_IPHONE && !UNITY_EDITOR
+[DllImport ("__Internal")]
+#else
+	[DllImport ("RenderingPlugin", EntryPoint="get_map_x1")]
+#endif
+	private static extern IntPtr get_map_x1();
+
+	//native function for get remap parameters for shader remap
+#if UNITY_IPHONE && !UNITY_EDITOR
+[DllImport ("__Internal")]
+#else
+[DllImport ("RenderingPlugin", EntryPoint="get_map_y1")]
+#endif
+private static extern IntPtr get_map_y1();
 
 	// We'll also pass native pointer to a texture in Unity.
 	// The plugin will fill texture data from native code.

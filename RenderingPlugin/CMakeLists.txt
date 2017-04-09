@@ -1,10 +1,11 @@
 # project
 cmake_minimum_required (VERSION 2.8)
-project (UnityCamera)
+project (RenderingPlugin)
 ADD_DEFINITIONS(-DUNITY_LINUX=1)
 
 # use opencv to read and show img
-find_package(OpenCV 2.4 REQUIRED)
+set(OpenCV_DIR "/home/long/depend/opencv/build")
+find_package(OpenCV REQUIRED)
 find_package( OpenGL REQUIRED )
 find_package( GLEW REQUIRED )
 
@@ -21,5 +22,5 @@ ${GLEW_INCLUDE_DIR}
 
 set(SOURCE_FILES RenderingPlugin.cpp VideoCap.cpp)
 
-add_library(UnityCamera SHARED ${SOURCE_FILES} )
+add_library(RenderingPlugin SHARED ${SOURCE_FILES} )
 

@@ -92,7 +92,26 @@ extern "C" bool UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API OpenWebCam(int index)
 		return false;
 	}
 }
+//return rectify maps to unity
+extern "C"  UNITY_INTERFACE_EXPORT float* get_map_x1()
+{
+	return (float*)video_cap_ptr->mx1_f.data;
+}
 
+extern "C"  UNITY_INTERFACE_EXPORT float* get_map_y1()
+{
+	return (float*)video_cap_ptr->my1_f.data;
+}
+
+extern "C"  UNITY_INTERFACE_EXPORT float* get_map_x2()
+{
+	return (float*)video_cap_ptr->mx2_f.data;
+}
+
+extern "C"  UNITY_INTERFACE_EXPORT float* get_map_y2()
+{
+	return (float*)video_cap_ptr->my2_f.data;
+}
 //destroy and delete and shutdown things.
 extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API DestroyWebCam()
 {
