@@ -1,3 +1,0 @@
-/home/long/slam/Unity/RenderingPlugin/build/CMakeFiles/edit_cache.dir
-/home/long/slam/Unity/RenderingPlugin/build/CMakeFiles/rebuild_cache.dir
-/home/long/slam/Unity/RenderingPlugin/build/CMakeFiles/UnityCamera.dir
