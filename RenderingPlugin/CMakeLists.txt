@@ -4,7 +4,6 @@ project (RenderingPlugin)
 ADD_DEFINITIONS(-DUNITY_LINUX=1)
 
 # use opencv to read and show img
-set(OpenCV_DIR "/home/long/depend/opencv/build")
 find_package(OpenCV REQUIRED)
 find_package( OpenGL REQUIRED )
 find_package( GLEW REQUIRED )
@@ -21,6 +20,6 @@ ${GLEW_INCLUDE_DIR}
 #SET(CMAKE_CXX_FLAGS "-msse3")
 
 set(SOURCE_FILES RenderingPlugin.cpp VideoCap.cpp)
-
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/../UnityProject (copy)/Assets/Plugins/x86_64 )
 add_library(RenderingPlugin SHARED ${SOURCE_FILES} )
 
